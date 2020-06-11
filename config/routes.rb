@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       post "/events", to: "travel#events"
 
       post "/login", to: "sessions#create"
+      post "/signup", to: "registrations#create"
 
     end
   end
