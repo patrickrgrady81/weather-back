@@ -6,6 +6,7 @@ class API::V1::TravelController < ApplicationController
   skip_before_action :verify_authenticity_token
   def restaurants
     city = params["travel"]["city"]
+    sleep(0.5)
     response = RestClient::Request.execute(
       method: "GET",
       url: "https://api.yelp.com/v3/businesses/search",  
